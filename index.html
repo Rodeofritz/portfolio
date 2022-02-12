@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Resume Project</title>
+	</head>
+	<body>
+		<header>
+			<div class="filter">
+				<nav class="nav-bar">
+					<div class="name">Frank Daniels</div>
+					<div class="linksContainer">
+						<ul class="nav-list">
+							<li class="list-items">
+								<a href="#home" class="scroll-link link-style">Home</a>
+							</li>
+							<li class="list-items">
+								<a href="#tech" class="scroll-link link-style">Tech Stack</a>
+							</li>
+							<li class="list-items">
+								<a href="#resume" class="scroll-link link-style">Resume</a>
+							</li>
+							<li class="list-items">
+								<a href="#about" class="scroll-link link-style">About</a>
+							</li>
+							<li class="list-items">
+								<a href="#contact" class="scroll-link link-style">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<section class="parallax">
+			<div class="p-box" id="tech">
+				<h2><span class="primary-clr">Tech</span> Stack</h2>
+			</div>
+			<div class="p-box" id="resume">
+				<h2>my <span class="secondary-clr">resume</span></h2>
+			</div>
+			<div class="p-box" id="about">
+				<h2>about <span class="secondary-clr">me</span></h2>
+			</div>
+			<div class="p-box" id="contact">
+						<h2 class="secondary-clr">
+							<span class="primary-clr">contact</span>
+							<span class="secondary-clr">information</span>
+						</h2>
+						<form>
+							<div class="row">
+								<div class="input-group">
+									<input type="text" id="name" required></>
+									<label for="name"><i class="fa-solid fa-user"></i>   Your Name</label>
+								</div>
+								<div class="input-group">
+									<input type="tel" id="number" required></>
+									<label for="number"><i class="fa-solid fa-phone"></i>   Phone Number</label>
+							</div>
+							</div>
+							<div class="input-group">
+								<input type="email" id="email" required></>
+								<label for="email"><i class="fa-solid fa-at"></i>   Email adress</label>
+							</div>
+							<div class="input-group">
+								<textarea id="message" rows="8" required></textarea>
+								<label for="message"><i class="fa-solid fa-comment"></i>   Your Message</label>
+							</div>
+							<button type="submit">SUBMIT   <i class="fa-solid fa-paper-plane"></i></button>
+						</form>
+				</div>
+		</section>
+		<footer>
+			<p>
+				copyright &copy; Frank Daniels portfoilio website
+				<span id="date">2022</span>. all rights reserved
+			</p>
+		</footer>
+
+		<script src="app.js"></script>
+	</body>
+</html>

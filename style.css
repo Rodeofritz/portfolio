@@ -1,0 +1,271 @@
+/* fonts */
+
+:root {
+	/* shades of grey */
+	--clr-primary-1: rgb(0, 0, 0);
+	--clr-primary-2: rgb(34, 32, 32);
+	--clr-primary-3: rgb(87, 87, 87);
+	--clr-primary-4: rgb(255, 255, 255);
+
+	/* shades of blue */
+	--clr-primary-5: rgb(0, 70, 76);
+	--clr-primary-6: rgb(0, 32, 76);
+	--clr-primary-7: rgb(6, 0, 76);
+
+	/* comlementary colors with blue */
+	--clr-primary-7: rgb(76, 6, 0);
+	--clr-primary-8: rgb(48, 4, 0);
+	--clr-primary-9: rgb(28, 2, 0);
+
+	/* light shades */
+	--clr-primary-10: rgb(191, 209, 210);
+	--clr-primary-11: rgb(128, 163, 166);
+	--clr-primary-12: rgb(191, 209, 210);
+
+	/* fonts */
+	--ff-primary: 'Roboto', sans-serif;
+	--ff-secondary: 'Open Sans', sans-serif;
+	--ff-fontWeight-light: 300;
+	--ff-font-weight-medium: 400;
+	--ff-fontWeight-bold: 700;
+
+	/* various */
+	--max-width: 1170px;
+	--fixed-width: 620px;
+	--light-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+	--spacing: 0.25rem;
+	--opacity-blue: rgba(0, 70, 76, 0.6);
+	--padding-big: 5rem;
+}
+
+/* standard styles */
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+}
+
+/* Global styles  */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	line-height: 1;
+	background: var(--clr-primary-1);
+	font-family: var(--ff-primary);
+	/* overflow-y: hidden; */
+}
+
+.primary-clr {
+	color: var(--clr-primary-5);
+}
+
+.secondary-clr {
+	color: var(--clr-primary-8);
+}
+
+h2 {
+	display: inline;
+	padding: 0.3rem 0 8.3rem 0;
+	color: var(--clr-primary-5);
+}
+
+/* Header */
+header {
+	background: url(/yang-miao-IazFaFYSCfY-unsplash.jpg) center/cover no-repeat;
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+
+.filter {
+	width: 100%;
+	height: 100%;
+	background: rgba(8, 8, 8, 0.5);
+	position: absolute;
+}
+
+/* Nav bar  */
+
+.nav-bar {
+	background-color: transparent;
+	color: var(--clr-primary-4);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	font-size: 1.3rem;
+	font-weight: var(--ff-fontWeight-light);
+	padding: 1rem;
+	margin: auto;
+	max-width: var(--max-width);
+	z-index: 1;
+}
+
+.fixed-nav {
+	position: fixed;
+	margin: auto;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--clr-primary-2);
+	box-shadow: var(--light-shadow);
+}
+.nav-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.link-style {
+	color: var(--clr-primary-4);
+}
+
+.list-items {
+	margin-right: 1.3rem;
+	padding-bottom: 2px;
+	position: relative;
+}
+
+.list-items::after {
+	content: ' ';
+	position: absolute;
+	bottom: -6px;
+	left: -5px;
+	right: -7px;
+	height: 1px;
+	background: var(--clr-primary-5);
+
+	transform: scaleX(0);
+	transition: transform 250ms ease-in;
+}
+
+.list-items:hover::after {
+	transform: scaleX(1);
+}
+
+/* Parallax effect */
+
+.parallax {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 100vh;
+	width: 100%;
+}
+.parallax h2 {
+	letter-spacing: var(--spacing);
+	z-index: 1;
+	color: var(--clr-primary-4);
+	font-weight: var(--ff-font-weight-light);
+	text-transform: uppercase;
+}
+
+.p-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+/* tech stack */
+.p-box:nth-child(1) {
+	background: var(--clr-primary-9);
+}
+/* my resume */
+.p-box:nth-child(2) {
+	background: var(--clr-primary-5);
+}
+/* about me */
+.p-box:nth-child(3) {
+	background: linear-gradient(rgba(255, 255, 255, 0.4), var(--clr-primary-11)),
+		url(/IMG_4496.jpeg) center/cover no-repeat;
+}
+
+/* contact me */
+.p-box:nth-child(4) {
+	background: linear-gradient(rgba(255, 255, 255, 0.7), var(--clr-primary-10)),
+		url(/florian-klauer-mk7D-4UCfmg-unsplash.jpg) center/cover no-repeat;
+}
+form {
+	width: 90%;
+	max-width: 600px;
+}
+
+.input-group {
+	margin-bottom: 2.3rem;
+	position: relative;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 0.2rem;
+	outline: 0;
+	border: 2px solid var(--clr-primary-12);
+	border-radius: 5px;
+	color: var(--clr-primary-3);
+	background: transparent;
+	font-size: 18px;
+}
+
+label {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0.5rem;
+	color: var(--clr-primary-3);
+	cursor: text;
+	transition: 250ms;
+}
+
+button {
+	padding: 0.5rem;
+	color: var(--clr-primary-3);
+	outline: none;
+	background: transparent;
+	border: 2px solid var(--clr-primary-12);
+	width: 100%;
+	cursor: pointer;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+	top: -28px;
+	font-size: 14px;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.row .input-group {
+	flex-basis: 48%;
+}
+
+/* footer */
+footer {
+	padding: var(--padding-big);
+	color: var(--clr-primary-4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
