@@ -14,7 +14,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./style.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js" integrity="sha512-5T245ZTH0m0RfONiFm2NF0zcYcmAuNzcGyPSQ18j8Bs5Pbfhp5HP1hosrR8XRt5M3kSRqzjNMYpm2+it/AUX/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<title>Resume Project</title>
 	</head>
@@ -50,14 +50,15 @@
 			<!-- hero section main page -->
 			<div class="hero">
 				<div class="hero-image">
-					<img src="./20220213_073511-04.jpeg" alt="black and white portrait foto of Frank Daniels">
-					<!-- <button class="btn-bg">Contact Me</button> -->
-					<a href="#contact" class=" hero-btn btn-bg">Contact Me</a>
+					<img src="./images/20220213_073511-04.jpeg" alt="black and white portrait foto of Frank Daniels">
 				</div>
-				<div class="intro-card">
-					<h1 class="hover-1">Hello, my name is  <span class="primary-clr">Frank Daniels</span></h1>
-					<h4 class="hover-2 align-center">i am an aspiring front-end developer loving        </h4>
-					<h4 class="hover-3 align-right"> the new skills i am learning!</h4>
+				<div class="card">
+					<div class="intro-card">
+						<h1 class="hover-1">Hello, my name is  <span class="primary-clr">Frank Daniels</span></h1>
+						<h4 class="hover-2 align-center">i am an aspiring front-end developer loving        </h4>
+						<h4 class="hover-3 align-right"> the new skills i am learning!</h4>
+					</div>
+					<a href="#contact" class=" hero-btn btn-bg">Contact Me</a>
 				</div>
 			</div>
 		</header>
@@ -67,6 +68,9 @@
 		<section class="parallax">
 			<div class="p-box" id="tech">
 				<h2><span class="primary-clr">Tech</span> Stack</h2>
+				<div class="tech-stack hidden">
+					<h1>This is where all my Tech Stack information will be displayed!</h1>
+				</div>
 				<div class="maze"></div>
 			</div>
 			<div class="p-box" id="resume">
