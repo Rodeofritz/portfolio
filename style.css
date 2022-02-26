@@ -95,8 +95,31 @@ h1 {
 
 h2 {
 	display: inline;
-	padding: 0.3em 0 6.3em 0;
+	padding: 0.3em 0 4em 0;
 	color: var(--clr-primary-5);
+}
+
+h3 {
+	padding: 0.7em;
+	margin-bottom: 3em;
+	margin-inline: 1em;
+}
+
+.custom-h3-light {
+	background-color: var(--clr-primary-4);
+	border-radius: 3px;
+	color: var(--clr-primary-5);
+	font-family: var(--ff-quicksand);
+}
+
+.custom-p-light {
+	background-color: var(--clr-primary-4);
+	border-radius: 3px;
+	color: var(--clr-primary-5);
+	font-family: var(--ff-quicksand);
+	margin-bottom: 1rem;
+	padding: 0.5em 1em;
+	font-weight: var(--ff-font-weight-bold);
 }
 
 h4 {
@@ -118,7 +141,7 @@ h4 {
 
 .btn-bg {
 	width: 220px;
-	margin: 2em 0 1em 0;
+	margin: 2rem 0 1rem 0;
 	padding: 0.9em 1.5em;
 	border-radius: 5px;
 	font-family: var(--ff-secondary);
@@ -177,9 +200,8 @@ header {
 	align-items: center;
 	height: 80px;
 	font-family: var(--ff-quicksand);
-	font-size: 1.3rem;
+	font-size: 1.3em;
 	font-weight: var(--ff-fontWeight-light);
-	padding: 1em;
 	z-index: 1;
 }
 
@@ -230,7 +252,6 @@ header {
 	align-items: center;
 	width: 100%;
 	height: 100vh;
-	margin: 2rem 0 1rem 0;
 }
 
 .hero img {
@@ -318,8 +339,8 @@ header {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 12em;
-	right: -1em;
+	left: 12rem;
+	right: -1rem;
 	background: var(--clr-primary-5);
 	z-index: -1;
 
@@ -391,7 +412,7 @@ header {
 
 /* Back to top button */
 .top-btn {
-	font-size: 1.25rem;
+	font-size: 1.25em;
 	position: fixed;
 	bottom: 6rem;
 	right: 6rem;
@@ -427,8 +448,6 @@ header {
 	}
 }
 
-/* Skills section */
-
 /* Parallax effect */
 .parallax {
 	display: flex;
@@ -456,7 +475,12 @@ header {
 	height: 100vh;
 }
 
+.txt-sm {
+	font-size: 0.5em;
+}
+
 /* tech stack */
+
 .p-box:nth-child(1) {
 	background: var(--clr-primary-9);
 }
@@ -464,19 +488,70 @@ header {
 .hidden {
 	display: none !important;
 }
+
 .tech-stack {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	z-index: 10;
+	z-index: 1;
 	height: 100vh;
-	width: 100vw;
+	width: 99vw;
 }
 
 .tech-stack h1 {
 	color: var(--clr-primary-5);
 	font-size: bold;
+}
+
+.tech-content {
+	background-color: var(--clr-primary-4);
+	border-radius: 4px;
+	min-width: 60%;
+	min-height: 60%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	padding: 1em;
+}
+
+.box .img-box {
+	height: 145px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-color: var(--clr-primary-4);
+}
+
+.box .img-box > img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	cursor: pointer;
+	transition: transform 500ms;
+}
+.box:hover .img-box > img {
+	transform: scale(1.1);
+}
+.box .img-box .img-css {
+	height: 150px;
+}
+.box .img-box .img-html {
+	height: 140px;
+}
+.box .img-box .img-git {
+	border-radius: 10px;
+}
+.box .img-box .img-react {
+	border-radius: 5px;
+}
+
+/* fading out the maze and titles */
+.out {
+	opacity: 0;
+	transition: opacity 1s;
 }
 
 /* my resume */
@@ -509,7 +584,7 @@ form {
 input,
 textarea {
 	width: 100%;
-	padding: 0.2rem;
+	padding: 0.2em;
 	outline: 0;
 	border: 2px solid var(--clr-primary-11);
 	border-radius: 5px;
@@ -523,14 +598,14 @@ label {
 	position: absolute;
 	left: 0;
 	top: 0;
-	padding: 0.5rem;
+	padding: 0.5em;
 	color: var(--clr-primary-3);
 	cursor: text;
 	transition: 250ms;
 }
 
 button {
-	padding: 0.5rem;
+	padding: 0.5em;
 	color: var(--clr-primary-3);
 	outline: none;
 	background: transparent;

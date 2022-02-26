@@ -29,19 +29,20 @@ date.innerHTML = new Date().getFullYear();
 // Animation for my name in the top right of the site
 const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
-const cellsHorizontal = 7;
-const cellsVertical = 6;
+const cellsHorizontal = 3;
+const cellsVertical = 3;
 const width = window.innerWidth / 4;
 const height = window.innerHeight / 2;
 
 const unitLengthX = width / cellsHorizontal;
 const unitLengthY = height / cellsVertical;
+const canvas = document.querySelector('.maze');
 
 const engine = Engine.create();
 engine.world.gravity.y = 0;
 const { world } = engine;
 const render = Render.create({
-	element: document.querySelector('.maze'),
+	element: canvas,
 	engine: engine,
 	options: {
 		wireframes: false,
@@ -248,11 +249,20 @@ Events.on(engine, 'collisionStart', (e) => {
 			world.bodies.forEach((body) => {
 				if (body.label === 'wall') {
 					Body.setStatic(body, false);
-					// show tech stack on completion
-					const techStack = document.querySelector('.tech-stack');
-					techStack.classList.remove('hidden');
+					// show tech stack on completion and gide other elements
+					setTimeout(() => showTechStack(), 2500);
 				}
 			});
 		}
 	});
 });
+
+const showTechStack = () => {
+	const techStack = document.querySelector('.tech-stack');
+	techStack.classList.remove('hidden');
+	canvas.style.display = 'none';
+	const mazeTitle = document.querySelector('.custom-h3-light');
+	mazeTitle.classList.add('hidden');
+	const mazeInstructions = document.querySelector('.maze-instructions');
+	mazeInstructions.classList.add('hidden');
+};
