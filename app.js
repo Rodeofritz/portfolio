@@ -12,6 +12,7 @@ window.addEventListener('scroll', function () {
 	} else {
 		container.classList.remove('fixed-nav');
 	}
+	// Back to top button
 	if (scrollHeight > 200) {
 		topBtn.classList.add('show-top-btn');
 	} else {
@@ -19,18 +20,34 @@ window.addEventListener('scroll', function () {
 	}
 });
 
-// back to top buttion
+// adjusting scroll for fixed navbar
+const scrollLink = document.querySelectorAll('.scroll-link');
+const navHeight = navBar.getBoundingClientRect().height;
+scrollLink.forEach(function (link) {
+	link.addEventListener('click', (e) => {
+		// preventing default scroll behaviour
+		e.preventDefault();
+		// grabbing href and turning it into an id element
+		const id = e.currentTarget.getAttribute('href').slice(1);
+		const element = document.getElementById(id);
+		let position = element.offsetTop;
+		window.scrollTo({
+			left: 0,
+			top: position - navHeight,
+		});
+	});
+});
 
 // setting date dynamically
 const date = document.getElementById('date');
 
 date.innerHTML = new Date().getFullYear();
 
-// Animation for my name in the top right of the site
+// Maze in the skills section
 const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
-const cellsHorizontal = 3;
-const cellsVertical = 3;
+const cellsHorizontal = 6;
+const cellsVertical = 6;
 const width = window.innerWidth / 4;
 const height = window.innerHeight / 2;
 
@@ -257,12 +274,24 @@ Events.on(engine, 'collisionStart', (e) => {
 	});
 });
 
+// transition from maze to teckstack box
 const showTechStack = () => {
 	const techStack = document.querySelector('.tech-stack');
 	techStack.classList.remove('hidden');
 	canvas.style.display = 'none';
-	const mazeTitle = document.querySelector('.custom-h3-light');
-	mazeTitle.classList.add('hidden');
 	const mazeInstructions = document.querySelector('.maze-instructions');
 	mazeInstructions.classList.add('hidden');
 };
+
+// changing  naame color on hover hero page
+const changeColor = document.getElementById('change-Color');
+const mainName = document.querySelector('.main-name');
+
+changeColor.addEventListener('mouseenter', function () {
+	// mainName.classList.add('secondary-clr');
+	mainName.style.color = 'white';
+});
+changeColor.addEventListener('mouseleave', function () {
+	// mainName.classList.remove('secondary-clr');
+	mainName.style.color = 'rgb(0, 70, 76)';
+});

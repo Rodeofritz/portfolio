@@ -52,13 +52,13 @@
 				<div class="hero-image">
 					<img src="./images/20220213_073511-04.jpeg" alt="black and white portrait foto of Frank Daniels">
 				</div>
-				<div class="card">
+				<div class="card" id="change-Color">
 					<div class="intro-card">
-						<h1 class="hover-1">Hello, my name is  <span class="primary-clr">Frank Daniels</span></h1>
+						<h1 class="hover-1">Hello, my name is  <span class=" main-name">Frank Daniels</span></h1>
 						<h4 class="hover-2 align-center">i am an aspiring front-end developer loving        </h4>
 						<h4 class="hover-3 align-right"> the new skills i am learning!</h4>
 					</div>
-					<a href="#contact" class=" hero-btn btn-bg">Contact Me</a>
+					<a href="#contact" class="scroll-link hero-btn btn-bg">Contact Me</a>
 				</div>
 			</div>
 		</header>
@@ -67,56 +67,91 @@
 		<!-- Parallax scroll section -->
 		<section class="parallax">
 			<div class="p-box" id="tech">
-				<h2><span class="primary-clr">Tech</span> Stack <span class="txt-sm">(skills)</span></h2>
-				<h3 class="custom-h3-light">Complete the maze to get more info on my present skills and roadmap for the future</h3>
-				<p class="custom-p-light maze-instructions">moving the ball: left= J, right= L, up= I, down=K</p>
+				<h2><span>Tech</span> Stack <span class="txt-sm primary-clr">(skills)</span></h2>
+				<!-- <h3 class="custom-h3-light">Complete the maze to get more info on my present skills and roadmap for the future</h3> -->
+				<p class="custom-p-light maze-instructions">moving the ball: <i class="fa-solid fa-arrow-left"></i> = J | <i class="fa-solid fa-arrow-right"></i> = L | <i class="fa-solid fa-arrow-up"></i> = I | <i class="fa-solid fa-arrow-down"></i> = K </p>
 				<div class="tech-stack hidden">
-					<div class="tech-show"><h2>lorem text...</h2></div>
+
+					<!-- skills content hover effect  -->
 					<div class="tech-content">
 						<div class="box">
 							<div class="img-box">
 								<img class="img-css" src="/images/CSS3.jpg" alt="css logo">
+							</div>
+							<div class="content-box">
+								<div class="details">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus esse corporis voluptatibus totam temporibus obcaecati dignissimos magnam minus ipsam optio.</p>
+								</div>
 							</div>
 						</div>
 						<div class="box">
 							<div class="img-box">
 								<img class="img-html" src="/images/HTML5.jpg" alt="html logo">
 							</div>
+							<div class="content-box">
+								<div class="details">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus esse corporis voluptatibus totam temporibus obcaecati dignissimos magnam minus ipsam optio.</p>
+								</div>
+							</div>
 						</div>
 						<div class="box">
 							<div class="img-box">
 								<img class="img-js" src="/images/JavaScript-Logo.jpg" alt="">
+							</div>
+							<div class="content-box">
+								<div class="details">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus esse corporis voluptatibus totam temporibus obcaecati dignissimos magnam minus ipsam optio.</p>
+								</div>
 							</div>
 						</div>
 						<div class="box">
 							<div class="img-box">
 								<img class="img-vsCode" src="/images/vs-code.jpg" alt="vs code logo">
 							</div>
+							<div class="content-box">
+								<div class="details">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus esse corporis voluptatibus totam temporibus obcaecati dignissimos magnam minus ipsam optio.</p>
+								</div>
+							</div>
 						</div>
 						<div class="box">
 							<div class="img-box">
 								<img class="img-git" src="/images/git-square.png" alt="git icon">
+							</div>
+							<div class="content-box">
+								<div class="details">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus esse corporis voluptatibus totam temporibus obcaecati dignissimos magnam minus ipsam optio.</p>
+								</div>
 							</div>
 						</div>
 						<div class="box">
 							<div class="img-box">
 								<img class="img-react" src="/images/download.png" alt="react logo">
 							</div>
+							<div class="content-box">
+								<div class="details">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus esse corporis voluptatibus totam temporibus obcaecati dignissimos magnam minus ipsam optio.</p>
+								</div>
+							</div>
 						</div>
 					</div>
+					<!-- end of skills hover effect -->
 				</div>
 				<div class="maze"></div>
 			</div>
 			<div class="p-box" id="resume">
-				<h2>my <span class="secondary-clr">resume</span></h2>
+				<h2>my <span class="secondary-clr ">resume</span></h2>
+				<div class="resume resume-box">
+					<p class="custom-p-light">As i already had a previous career i thought i would include it. My background is in the hospitality industry where i worked mainly as a freelance project manager.</p>
+				</div>
 			</div>
 			<div class="p-box" id="about">
-				<h2>about <span class="secondary-clr">me</span></h2>
+				<h2>about <span class="primary-clr-blue">me</span></h2>
 			</div>
 			<div class="p-box" id="contact">
 						<h2 class="secondary-clr">
-							<span class="primary-clr">contact</span>
-							<span class="secondary-clr">information</span>
+							<span class="primary-clr-blue">contact</span>
+							<span class="secondary-clr ">information</span>
 						</h2>
 
 						<!-- contact form -->
